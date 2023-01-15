@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".Fragments.ProfileTab">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imgProfile"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/choose_image"
+        app:civ_border_width="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:civ_border_color="#FF000000"/>
+
+    <TextView
+        android:id="@+id/tvUserProfileName"
+        android:hint="User Profile Name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgProfile"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvUserBio"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserProfileName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="User Bio"
+        android:padding="10dp"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvUserProfession"
+        android:hint="User Profession"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserBio"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tvUserHobbies"
+        android:hint="User Hobbies"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserProfession"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tvUserFavSports"
+        android:hint="User Favorite Sport"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserHobbies"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+</RelativeLayout>

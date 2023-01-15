@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".Fragments.ProfileTab">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imgProfile"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/choose_image"
+        app:civ_border_color="#000000"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/tvUserProfileName"
+        android:hint="@string/user_profile_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgProfile"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/llProfile1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserProfileName"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvUserBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/user_bio"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tvUserProfession"
+            android:hint="@string/user_profession"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llProfile2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llProfile1"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvUserHobbies"
+            android:hint="@string/user_hobbies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvUserFavSports"
+            android:hint="@string/user_favorite_sport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvUserPostCount"
+        android:text="@string/no_post"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/llProfile2"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textColor="@color/blue"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollUserPost"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llProfile2"
+        android:layout_marginTop="10dp">
+
+        <GridLayout
+            android:id="@+id/gridPost"
+            android:visibility="gone"
+            android:columnCount="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

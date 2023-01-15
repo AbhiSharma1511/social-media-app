@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlEditProfile"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivites.EditProfileActivity"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/choose_image1"/>
+
+    <EditText
+        android:id="@+id/edtProfileName"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/imgUser"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_profile"
+        android:ems="10"
+        android:hint="Enter Your Profile Name"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/edtBio"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/edtProfileName"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Enter Your Bio"
+        android:inputType="textPersonName"
+        android:background="@drawable/edit_profile"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/edtProfession"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/edtBio"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Enter Your Profession"
+        android:inputType="textPersonName"
+        android:background="@drawable/edit_profile"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/edtHobbies"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/edtProfession"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_profile"
+        android:ems="10"
+        android:hint="Enter Your Hobbies"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/edtSports"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/edtHobbies"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Enter Your Favorite Sport"
+        android:inputType="textPersonName"
+        android:background="@drawable/edit_profile"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp" />
+
+    <Button
+        android:id="@+id/btnUpdateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtSports"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Update Info" />
+
+</RelativeLayout>
