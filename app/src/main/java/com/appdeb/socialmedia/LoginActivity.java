@@ -34,12 +34,15 @@ public class LoginActivity extends AppCompatActivity {
                 String username = binding.edtUsername.getText().toString();
                 String password = binding.edtPassword.getText().toString();
 
-                progressDialog = new ProgressDialog(LoginActivity.this);
-                progressDialog.setMessage("Logging...");
+                if(username.equals("") || password.equals("")){
 
-                progressDialog.show();
+                }else{
+                    progressDialog = new ProgressDialog(LoginActivity.this);
+                    progressDialog.setMessage("Logging...");
+                    progressDialog.show();
+                    loginUser(username, password);
+                }
 
-                loginUser(username, password);
             }
         });
 
@@ -77,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (user != null && e == null) {
                     if (user.getBoolean("emailVerified")) {
                         FancyToast.makeText(LoginActivity.this, user.getUsername() + " logged in ☺", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false).show();
-                        Intent intent = new Intent(LoginActivity.this, SocialMediaActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         progressDialog.dismiss();
                         startActivity(intent);
                         finish();

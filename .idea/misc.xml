@@ -4,10 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/drawable/background.xml" value="0.27291666666666664" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/drawable/edit_profile.xml" value="0.2078125" />
         <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/drawable/tv_shape.xml" value="0.27291666666666664" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/activity_edit_profile.xml" value="0.24114583333333334" />
         <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/activity_login.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/activity_main2.xml" value="0.19375" />
         <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/activity_sign_up.xml" value="0.25677083333333334" />
         <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/activity_splash.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/fragment_chatting_tab.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/fragment_profile_tab.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/fragment_profile_tab2.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/fragment_reels_tab.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/fragment_user_tab.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/fragment_users_post_tab.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/layout/my_toolbar.xml" value="0.25677083333333334" />
+        <entry key="..\:/MyAndroidProjects/Udemy Projects 3/SocialMedia/app/src/main/res/menu/main_menu.xml" value="0.25677083333333334" />
       </map>
     </option>
   </component>

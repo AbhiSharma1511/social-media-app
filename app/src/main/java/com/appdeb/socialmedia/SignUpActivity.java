@@ -20,6 +20,8 @@ public class SignUpActivity extends AppCompatActivity {
     private ActivitySignUpBinding binding;
     private ProgressDialog progressDialog;
 
+    final ParseUser user = new ParseUser();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +30,11 @@ public class SignUpActivity extends AppCompatActivity {
 
         setTitle("Sign Up");
 
-
         binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 progressDialog = new ProgressDialog(SignUpActivity.this);
-                signUpUser();
-
+                signUpUsers();
             }
         });
 
@@ -63,36 +63,32 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    private void signUpUser() {
-
+    private void signUpUsers() {
         String email = binding.edtSignUpEmail.getText().toString();
         String username = binding.edtSignUpUsername.getText().toString();
         String password = binding.edtSignUpPassword.getText().toString();
 
-        if (email.equals("") || username.equals("") || password.equals("")) {
-//            FancyToast.makeText(this, "Enter all required field!", FancyToast.LENGTH_LONG, FancyToast.DEFAULT, true);
-            Toast.makeText(SignUpActivity.this, "Enter all required field!", Toast.LENGTH_SHORT).show();
+        if (email.equals("") || username.equals("") || password.equals("")){
+            Toast.makeText(SignUpActivity.this, "Enter all required fields!", Toast.LENGTH_SHORT).show();
         }
-        else {
-            final ParseUser user = new ParseUser();
+        else{
             user.setUsername(username);
             user.setEmail(email);
             user.setPassword(password);
 
-            progressDialog.setMessage("Signing up " + username);
+            progressDialog.setMessage("Creating user...");
             progressDialog.show();
             user.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
-                    if (e == null) {
+                    if (e==null){
                         FancyToast.makeText(SignUpActivity.this, "Sign Up Successful " + user.getUsername() + "☺", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false).show();
                         Intent intent1 = new Intent(SignUpActivity.this, LoginActivity.class);
                         startActivity(intent1);
                         progressDialog.dismiss();
                         finish();
-                    } else {
+                    }else {
                         FancyToast.makeText(SignUpActivity.this, "Error: " + e.getMessage(), FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
-                        progressDialog.dismiss();
                     }
                 }
             });

@@ -20,10 +20,11 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                ParseUser currentUser = ParseUser.getCurrentUser();
+
                 try{
+                    ParseUser currentUser = ParseUser.getCurrentUser();
                     if (currentUser.getBoolean("emailVerified")) {
-                        Intent intent = new Intent(SplashActivity.this, SocialMediaActivity.class);
+                        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     } else {
