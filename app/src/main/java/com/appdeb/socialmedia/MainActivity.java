@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private TabAdapter tabAdapter;
     private TabLayout tabLayout;
 
-    String[] tabName = {"🏠","➕","@","👤"};
+    String[] tabName = {"🏠","APost","Friend","👤"};
 //    ArrayList<Drawable> tabNames = {};
 
     @Override

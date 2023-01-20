@@ -6,8 +6,7 @@
     android:layout_margin="20dp"
     tools:context=".Fragments.ProfileTab">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/imgProfile"
         android:layout_width="96dp"
         android:layout_height="96dp"
@@ -92,38 +91,47 @@
             android:textColor="@color/black"
             android:layout_weight="1"
             android:gravity="center"/>
+
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tvUserPostCount"
-        android:text="@string/no_post"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/llProfile2"
-        android:gravity="center"
-        android:textSize="40sp"
-        android:textColor="@color/blue"
-        android:layout_marginTop="150dp"
+        android:id="@+id/divider"
+        android:background="#A3A3A3"
+        android:layout_marginStart="5dp"
+        android:paddingTop="10dp"
+        android:layout_marginEnd="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_below="@+id/llProfile2"
+        android:layout_height="2dp"/>
 
-
-    <ScrollView
-        android:id="@+id/scrollUserPost"
-        android:visibility="gone"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/llProfile2"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/llProfile2">
 
-        <GridLayout
-            android:id="@+id/gridPost"
-            android:visibility="gone"
-            android:columnCount="3"
+    <TextView
+        android:id="@+id/tvUserPostInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/no_post"
+        android:textColor="@color/blue"
+        android:textSize="40sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCurrentUserPost"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
 
 
-    </ScrollView>
 
 
 </RelativeLayout>

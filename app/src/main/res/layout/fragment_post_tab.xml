@@ -3,16 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.ProfileTab">
+    android:padding="30sp"
+    tools:context=".Fragments.PostTab">
 
+    <ImageView
+        android:id="@+id/imgChooseImage"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_marginTop="30sp"
+        android:src="@drawable/choose_image1" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edtCaption"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="30sp"
-        android:text="Reels Tab" />
+        android:layout_below="@+id/imgChooseImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Enter Caption"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnShareImage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtCaption"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:text="Share Image" />
 
 
 </RelativeLayout>

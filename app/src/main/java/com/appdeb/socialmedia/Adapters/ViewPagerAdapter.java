@@ -28,19 +28,19 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
 
             case 0:
                 Fragment fragment = new UsersPostTab();
-                args.putInt(ProfileTab.TITLE, position + 1);
+                args.putInt(UsersPostTab.TITLE, position + 1);
                 fragment.setArguments(args);
                 return fragment;
 
             case 1:
                 Fragment fragment1 = new PostTab();
-                args.putInt(ProfileTab.TITLE, position + 1);
+                args.putInt(PostTab.TITLE, position + 1);
                 fragment1.setArguments(args);
                 return fragment1;
 
             case 2:
                 Fragment fragment2 = new ChattingTab();
-                args.putInt(ProfileTab.TITLE, position + 1);
+                args.putInt(ChattingTab.TITLE, position + 1);
                 fragment2.setArguments(args);
                 return fragment2;
 

@@ -89,6 +89,7 @@ public class SignUpActivity extends AppCompatActivity {
                         finish();
                     }else {
                         FancyToast.makeText(SignUpActivity.this, "Error: " + e.getMessage(), FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
+                        progressDialog.dismiss();
                     }
                 }
             });
